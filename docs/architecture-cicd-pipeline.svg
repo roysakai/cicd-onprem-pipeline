@@ -1,0 +1,70 @@
+<svg width="800" viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, system-ui, sans-serif">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<rect x="24" y="24" width="320" height="532" rx="16" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#444441" x="44" y="52">On-premises infrastructure</text>
+<text font-size="12" fill="#5F5E5A" x="44" y="70">KVM / Libvirt · OpenSUSE host</text>
+
+<rect x="64" y="90" width="240" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#444441" x="184" y="106" text-anchor="middle" dominant-baseline="central">Git repository</text>
+<text font-size="12" fill="#5F5E5A" x="184" y="122" text-anchor="middle" dominant-baseline="central">Developer pushes code</text>
+
+<line x1="184" y1="134" x2="184" y2="168" stroke="#888780" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-size="12" fill="#888780" x="198" y="157">webhook</text>
+
+<rect x="64" y="168" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#3C3489" x="184" y="188" text-anchor="middle" dominant-baseline="central">Jenkins</text>
+<text font-size="12" fill="#534AB7" x="184" y="206" text-anchor="middle" dominant-baseline="central">Pipeline orchestration · vm-jenkins</text>
+
+<path d="M184 224 L184 258 L104 258 L104 278" stroke="#888780" stroke-width="0.5" fill="none" marker-end="url(#arrow)"/>
+<path d="M184 224 L184 258 L264 258 L264 278" stroke="#888780" stroke-width="0.5" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="54" y="278" width="100" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#085041" x="104" y="298" text-anchor="middle" dominant-baseline="central">Maven</text>
+<text font-size="12" fill="#0F6E56" x="104" y="316" text-anchor="middle" dominant-baseline="central">Build · test</text>
+
+<rect x="214" y="278" width="100" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#712B13" x="264" y="298" text-anchor="middle" dominant-baseline="central">SonarQube</text>
+<text font-size="12" fill="#993C1D" x="264" y="316" text-anchor="middle" dominant-baseline="central">Code quality · vm</text>
+
+<path d="M104 334 L104 364 L184 364 L184 384" stroke="#888780" stroke-width="0.5" fill="none" marker-end="url(#arrow)"/>
+<path d="M264 334 L264 364 L184 364 L184 384" stroke="#888780" stroke-width="0.5" fill="none" marker-end="url(#arrow)"/>
+
+<rect x="84" y="384" width="200" height="56" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#633806" x="184" y="404" text-anchor="middle" dominant-baseline="central">Quality gate</text>
+<text font-size="12" fill="#854F0B" x="184" y="422" text-anchor="middle" dominant-baseline="central">Pass · fail · abort pipeline</text>
+
+<line x1="184" y1="440" x2="184" y2="474" stroke="#888780" stroke-width="0.5" marker-end="url(#arrow)"/>
+<text font-size="12" fill="#888780" x="198" y="463">on pass</text>
+
+<rect x="64" y="474" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#0C447C" x="184" y="494" text-anchor="middle" dominant-baseline="central">Nexus</text>
+<text font-size="12" fill="#185FA5" x="184" y="512" text-anchor="middle" dominant-baseline="central">Artifact storage · vm-nexus</text>
+
+<rect x="396" y="384" width="180" height="44" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+<text font-size="14" font-weight="500" fill="#791F1F" x="486" y="406" text-anchor="middle" dominant-baseline="central">Pipeline aborted</text>
+<path d="M284 412 L396 412" stroke="#E24B4A" stroke-width="0.5" fill="none" marker-end="url(#arrow)"/>
+<text font-size="12" fill="#A32D2D" x="340" y="402" text-anchor="middle">on fail</text>
+
+<rect x="370" y="88" width="288" height="240" rx="12" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="6 4"/>
+<text font-size="12" fill="#5F5E5A" x="382" y="108">Pipeline stages</text>
+
+<rect x="386" y="120" width="256" height="36" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text font-size="12" fill="#5F5E5A" x="514" y="142" text-anchor="middle" dominant-baseline="central">1 · Checkout source code</text>
+
+<rect x="386" y="166" width="256" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="12" fill="#085041" x="514" y="188" text-anchor="middle" dominant-baseline="central">2 · mvn clean package</text>
+
+<rect x="386" y="212" width="256" height="36" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="12" fill="#712B13" x="514" y="234" text-anchor="middle" dominant-baseline="central">3 · mvn sonar:sonar</text>
+
+<rect x="386" y="258" width="256" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text font-size="12" fill="#633806" x="514" y="280" text-anchor="middle" dominant-baseline="central">4 · waitForQualityGate</text>
+
+<rect x="386" y="304" width="256" height="36" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="12" fill="#0C447C" x="514" y="326" text-anchor="middle" dominant-baseline="central">5 · mvn deploy → Nexus</text>
+</svg>
