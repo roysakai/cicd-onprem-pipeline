@@ -40,7 +40,7 @@ All services run on dedicated Ubuntu 22.04 VMs provisioned via Vagrant on KVM/Li
 ---
 
 ## Infrastructure
-
+![Architecture diagram](docs/architecture-cicd-pipeline.svg)
 ```
 Host: OpenSUSE Tumbleweed — KVM/Libvirt
 │
